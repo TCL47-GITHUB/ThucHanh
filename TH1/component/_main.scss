@@ -1,0 +1,16 @@
+.main {
+    margin-left: 250px;
+    margin-right: 250px;
+    width: 850px;
+    height: 557px;
+    .article{
+        &__title{
+
+        }
+        &__content{
+            justify-content: center;
+            width: 650px;
+            height: 337px;
+        }
+    }
+}

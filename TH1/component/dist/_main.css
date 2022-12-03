@@ -1,0 +1,11 @@
+.main {
+  margin-left: 250px;
+  margin-right: 250px;
+  width: 850px;
+  height: 557px;
+}
+.main .article__content {
+  justify-content: center;
+  width: 650px;
+  height: 337px;
+}
