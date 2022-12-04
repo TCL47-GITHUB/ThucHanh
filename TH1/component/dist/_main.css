@@ -1,11 +1,21 @@
 .main {
-  margin-left: 250px;
-  margin-right: 250px;
+  margin-left: auto;
+  margin-right: auto;
   width: 850px;
   height: 557px;
+  background: #FFFFFF;
+}
+.main .article__title {
+  font-size: 64px;
 }
 .main .article__content {
-  justify-content: center;
+  position: absolute;
   width: 650px;
-  height: 337px;
+  height: 377px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 27px;
+  color: #000000;
 }

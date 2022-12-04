@@ -1,16 +1,41 @@
 .main {
-    margin-left: 250px;
-    margin-right: 250px;
-    width: 850px;
-    height: 557px;
-    .article{
-        &__title{
 
+    background: #FFFFFF;
+
+    .article {
+        width: 850px;
+        height: 557px; 
+        margin-left: auto;
+        margin-right: auto;   
+        &__title {
+            font-size: 64px;
+            // hiển thị kiểu list - item giống ul,li
+            display: list-item;
+            list-style-position: inside;
+            margin-block-start: 0.8em;
+            margin-block-end: 0.3em;
         }
-        &__content{
-            justify-content: center;
+        &__title::marker{
+            color: #ED9747;
+        }
+
+        &__line {
+            height: 6px;
+            background-color: #000000;
+        }
+
+        &__content {
+            margin-left: 8%;
+            margin-top: 5%;
+            margin-right: auto;
             width: 650px;
-            height: 337px;
+            height: 377px;
+            font-family: "Inter";
+            font-style: normal;
+            font-weight: 300;
+            font-size: 22px;
+            line-height: 27px;
+            color: #000000;
         }
     }
 }

@@ -1,31 +1,88 @@
 .header {
-    width: 100%;
 
-    &__banner {
-        width: 100%;
-        height: auto;
+    .group-banner {
+        display: flex;
+        align-items: flex-end;
+
+        &__img {
+            width: 1440px;
+            height: 362px;
+        }
+
+        &__title {
+            /* ORANGE */
+            position: absolute;
+            width: 1440px;
+            height: 261px;
+            font-weight: 800;
+            font-size: 96px;
+            line-height: 116px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            letter-spacing: 0.15em;
+            color: #FFFFFF;
+
+        }
+
+        @media (max-width: 1500px) {
+            &__img {
+                width: 100vw;
+                height: auto;
+            }
+            &__title {
+                width: 100vw;
+                height: 40vh;
+            }
+        }
     }
 
     &__menu {
+        position: relative;
         display: flex;
-        flex-direction: row;
-        .header-nav{
+        align-items: center;
+        margin-top: 10px;
+
+        .menu-list {
             display: flex;
-            width: 70%;
-            align-items: center;
-            padding-left: 200px;
-            &__item{
+            list-style-type: none;
+            margin-left: 90px;
+
+            &__item {
+                font-weight: 600;
                 font-size: 28px;
-                width: 172px;
-                height: 50px;
+                margin: 0 50px;
+                color: #000;
+                text-decoration: none;
             }
         }
+
         .header-search {
-            width: 258px;
-            height: 43px;
-            border: 0.3px solid;
-            filter: drop-shadow(16px 16px 10px rgb(196, 196, 196));
-            border-radius: 18px;
+            position: absolute;
+            margin: auto 115px;
+            right: 0px;
+
+            &__box {
+                width: 258px;
+                height: 43px;
+                padding-left: 15px;
+                border: 0.4px solid #f1f1f1;
+                filter: drop-shadow(5px 5px 10px #c4c4c4);
+                border-radius: 18px;
+                font-size: 24px;
+                font-weight: 400;
+            }
+
+            // chỉnh ouline "input" khi forcus
+            &__box:focus {
+                outline: 0.4px;
+            }
+        }
+
+        @media (max-width:1250px) {
+            .header-search {
+                margin: 0;
+            }
         }
     }
 }

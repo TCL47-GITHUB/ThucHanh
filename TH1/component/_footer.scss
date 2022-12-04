@@ -1,11 +1,81 @@
-.header-nav{
-    display: flex;
-    width: 70%;
-    align-items: center;
-    padding-left: 200px;
-    &__item{
-        font-size: 28px;
-        width: 172px;
+.footer {
+    margin-top: 233px;
+
+    .footer-nav {
+        display: flex;
+        align-items: center;
+        background-color: #ED9747;
         height: 50px;
+
+        .menu-list {
+            display: flex;
+            // ẩn dấu chấm ul
+            list-style-type: none;
+            margin: 0 auto;
+
+            &__item {
+                font-weight: 600;
+                font-size: 28px;
+                color: #fff;
+                text-decoration: none;
+                margin: 0 50px 0 50px;
+            }
+        }
+    }
+
+    &__link {
+        width: 1440px;
+        height: 237px;
+        background: #515151;
+        color: #fff;
+
+        .link-grid {
+            display: grid;
+            position: relative;
+            right: 115px;
+            grid-template-columns: auto 16%;
+
+            &__col {
+                padding: 20px;
+                font-size: 30px;
+                margin: 0 15px;
+            }
+
+            .last-col {
+                margin-top: 10%;
+                &__inf {
+                    font-weight: 500;
+                    font-size: 20px;
+                }
+
+                &__contact {
+                    font-weight: 600;
+                    font-size: 28px;
+                }
+            }
+        }
+    }
+
+    &__author {
+        display: flex;
+        align-items: center;
+        height: 50px;
+        background-color: #A1C96F;
+        position: relative;
+
+        .author-detail {
+            right: 115px;
+            position: absolute;
+            color: #fff;
+            font-weight: 600;
+            font-size: 16px;
+        }
+    }
+
+    @media (max-width:1500px) {
+        &__link{
+            width: 100%;
+            height: auto;
+        }
     }
 }
