@@ -3,17 +3,17 @@
     .group-banner {
         display: flex;
         align-items: flex-end;
-
         &__img {
-            width: 1440px;
-            height: 362px;
+            width: 100%;
+            height: auto;
         }
 
         &__title {
             /* ORANGE */
             position: absolute;
-            width: 1440px;
-            height: 261px;
+            margin: 0 auto;
+            width: 100%;
+            height: calc(100% - 20%);
             font-weight: 800;
             font-size: 96px;
             line-height: 116px;
@@ -23,17 +23,6 @@
             letter-spacing: 0.15em;
             color: #FFFFFF;
 
-        }
-
-        @media (max-width: 1500px) {
-            &__img {
-                width: 100vw;
-                height: auto;
-            }
-            &__title {
-                width: 100vw;
-                height: 40vh;
-            }
         }
     }
 
@@ -55,11 +44,14 @@
                 color: #000;
                 text-decoration: none;
             }
+            &__item:hover {
+                color: rgb(18, 0, 180);
+            }
         }
 
         .header-search {
             position: absolute;
-            margin: auto 115px;
+            margin: 0 115px 0 0;
             right: 0px;
 
             &__box {
@@ -78,9 +70,24 @@
                 outline: 0.4px;
             }
         }
+    }
+}
 
-        @media (max-width:1250px) {
-            .header-search {
+@media (max-width:768px) {
+    .header{
+        .group-banner{
+            &__title{
+                font-size: 50px;
+            }
+        }
+        &__menu{
+            .menu-list{
+                margin-left: 0;
+                &__item {
+                    margin: 0 15px;
+                }
+            }
+            .header-search{
                 margin: 0;
             }
         }

@@ -20,29 +20,34 @@
                 text-decoration: none;
                 margin: 0 50px 0 50px;
             }
+            &__item:hover {
+                color: rgb(0, 0, 0);
+            }
         }
     }
 
     &__link {
-        width: 1440px;
-        height: 237px;
+        width: 100%;
+        height: auto;
+        max-height: 237px;
         background: #515151;
         color: #fff;
 
         .link-grid {
             display: grid;
             position: relative;
-            right: 115px;
-            grid-template-columns: auto 16%;
+            grid-template-columns: auto 227px;
+            padding: 10px;
+            margin-right: 115px;
 
             &__col {
-                padding: 20px;
                 font-size: 30px;
                 margin: 0 15px;
             }
 
             .last-col {
-                margin-top: 10%;
+                max-width: 227px;
+                margin-right: 10%;
                 &__inf {
                     font-weight: 500;
                     font-size: 20px;
@@ -71,11 +76,11 @@
             font-size: 16px;
         }
     }
-
-    @media (max-width:1500px) {
-        &__link{
-            width: 100%;
-            height: auto;
+}
+@media (max-width:768px) {
+    .footer{
+        .footer-nav{
+            display: none;
         }
     }
 }
