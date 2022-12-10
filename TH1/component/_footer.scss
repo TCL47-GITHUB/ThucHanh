@@ -20,6 +20,7 @@
                 text-decoration: none;
                 margin: 0 50px 0 50px;
             }
+
             &__item:hover {
                 color: rgb(0, 0, 0);
             }
@@ -48,6 +49,7 @@
             .last-col {
                 max-width: 227px;
                 margin-right: 10%;
+
                 &__inf {
                     font-weight: 500;
                     font-size: 20px;
@@ -77,10 +79,29 @@
         }
     }
 }
+
 @media (max-width:768px) {
-    .footer{
-        .footer-nav{
+    .footer {
+        .footer-nav {
             display: none;
+        }
+
+        &__link {
+            .link-grid {
+                display: flex;
+                position: relative;
+                padding: 10px;
+                justify-content: center;
+                margin-right: unset;
+            }
+        }
+
+        &__author {
+            justify-content: center;
+
+            .author-detail {
+                right: unset;
+            }
         }
     }
 }

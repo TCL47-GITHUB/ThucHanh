@@ -1,6 +1,7 @@
 .main {
 
     background: #FFFFFF;
+    margin-top: 115px;
 
     .article {
         max-width: 850px;
@@ -40,6 +41,8 @@
 }
 @media (max-width:768px) {
     .main{
+        margin-top: 0;
+
         .article{
             &__title{
                 font-size: 40px;

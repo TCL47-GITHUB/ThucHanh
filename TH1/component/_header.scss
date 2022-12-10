@@ -3,6 +3,7 @@
     .group-banner {
         display: flex;
         align-items: flex-end;
+
         &__img {
             width: 100%;
             height: auto;
@@ -13,7 +14,7 @@
             position: absolute;
             margin: 0 auto;
             width: 100%;
-            height: calc(100% - 20%);
+            height: 261px;
             font-weight: 800;
             font-size: 96px;
             line-height: 116px;
@@ -24,37 +25,39 @@
             color: #FFFFFF;
 
         }
+
     }
 
-    &__menu {
-        position: relative;
+    .menu-list {
         display: flex;
-        align-items: center;
+        list-style-type: none;
         margin-top: 10px;
+        align-items: center;
 
-        .menu-list {
-            display: flex;
-            list-style-type: none;
-            margin-left: 90px;
-
-            &__item {
-                font-weight: 600;
-                font-size: 28px;
-                margin: 0 50px;
-                color: #000;
-                text-decoration: none;
-            }
-            &__item:hover {
-                color: rgb(18, 0, 180);
-            }
+        &__item {
+            font-weight: 600;
+            font-size: 28px;
+            color: #000;
+            text-decoration: none;
+            text-align: center;
+            width: 172px;
+            height: 50px;
+            line-height: 50px;
         }
 
-        .header-search {
-            position: absolute;
-            margin: 0 115px 0 0;
-            right: 0px;
+        &__item:hover {
+            color: rgb(18, 0, 180);
+        }
 
-            &__box {
+        &__item:first-child{
+            margin-left: 165px;
+        }
+
+        &__search {
+            position: absolute;
+            right: 115px;
+
+            .search-box {
                 width: 258px;
                 height: 43px;
                 padding-left: 15px;
@@ -66,30 +69,25 @@
             }
 
             // chỉnh ouline "input" khi forcus
-            &__box:focus {
+            .search-box:focus {
                 outline: 0.4px;
             }
         }
     }
+
+
 }
 
 @media (max-width:768px) {
     .header{
-        .group-banner{
-            &__title{
-                font-size: 50px;
-            }
-        }
-        &__menu{
-            .menu-list{
-                margin-left: 0;
-                &__item {
-                    margin: 0 15px;
-                }
-            }
-            .header-search{
+        .menu-list{
+            flex-direction: column;
+            &__item:first-child{
                 margin: 0;
             }
+             &__search{
+                position: unset;
+             }
         }
     }
 }

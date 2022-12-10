@@ -31,7 +31,7 @@ body {
   position: absolute;
   margin: 0 auto;
   width: 100%;
-  height: calc(100% - 20%);
+  height: 261px;
   font-weight: 800;
   font-size: 96px;
   line-height: 116px;
@@ -41,33 +41,33 @@ body {
   letter-spacing: 0.15em;
   color: #FFFFFF;
 }
-.header__menu {
-  position: relative;
-  display: flex;
-  align-items: center;
-  margin-top: 10px;
-}
-.header__menu .menu-list {
+.header .menu-list {
   display: flex;
   list-style-type: none;
-  margin-left: 90px;
+  margin-top: 10px;
+  align-items: center;
 }
-.header__menu .menu-list__item {
+.header .menu-list__item {
   font-weight: 600;
   font-size: 28px;
-  margin: 0 50px;
   color: #000;
   text-decoration: none;
+  text-align: center;
+  width: 172px;
+  height: 50px;
+  line-height: 50px;
 }
-.header__menu .menu-list__item:hover {
+.header .menu-list__item:hover {
   color: #1200b4;
 }
-.header__menu .header-search {
-  position: absolute;
-  margin: 0 115px 0 0;
-  right: 0px;
+.header .menu-list__item:first-child {
+  margin-left: 165px;
 }
-.header__menu .header-search__box {
+.header .menu-list__search {
+  position: absolute;
+  right: 115px;
+}
+.header .menu-list__search .search-box {
   width: 258px;
   height: 43px;
   padding-left: 15px;
@@ -77,26 +77,24 @@ body {
   font-size: 24px;
   font-weight: 400;
 }
-.header__menu .header-search__box:focus {
+.header .menu-list__search .search-box:focus {
   outline: 0.4px;
 }
 
 @media (max-width: 768px) {
-  .header .group-banner__title {
-    font-size: 50px;
+  .header .menu-list {
+    flex-direction: column;
   }
-  .header__menu .menu-list {
-    margin-left: 0;
-  }
-  .header__menu .menu-list__item {
-    margin: 0 15px;
-  }
-  .header__menu .header-search {
+  .header .menu-list__item:first-child {
     margin: 0;
+  }
+  .header .menu-list__search {
+    position: unset;
   }
 }
 .main {
   background: #FFFFFF;
+  margin-top: 115px;
 }
 .main .article {
   max-width: 850px;
@@ -127,6 +125,9 @@ body {
 }
 
 @media (max-width: 768px) {
+  .main {
+    margin-top: 0;
+  }
   .main .article__title {
     font-size: 40px;
   }
@@ -203,5 +204,18 @@ body {
 @media (max-width: 768px) {
   .footer .footer-nav {
     display: none;
+  }
+  .footer__link .link-grid {
+    display: flex;
+    position: relative;
+    padding: 10px;
+    justify-content: center;
+    margin-right: unset;
+  }
+  .footer__author {
+    justify-content: center;
+  }
+  .footer__author .author-detail {
+    right: unset;
   }
 }
