@@ -62,6 +62,10 @@
 }
 
 @media (max-width: 768px) {
+  .header .group-banner__title {
+    align-items: flex-end;
+    font-size: 50px;
+  }
   .header .menu-list {
     flex-direction: column;
   }

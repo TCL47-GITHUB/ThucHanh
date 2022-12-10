@@ -80,6 +80,12 @@
 
 @media (max-width:768px) {
     .header{
+        .group-banner{
+            &__title{
+                align-items: flex-end;
+                font-size: 50px;
+            }
+        }
         .menu-list{
             flex-direction: column;
             &__item:first-child{
